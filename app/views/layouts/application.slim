@@ -1,0 +1,38 @@
+doctype html
+html lang="en"
+	head
+		meta charset="utf-8"
+		title Big Chill
+		meta name="description" content="Big Chill is known for its award-winning beverages, having been recognized as the &quot;Best Fruit Shake Drink&quot; by the Product Quality Excellence Awards for both the regional and national categories."
+		meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		= csrf_meta_tags
+		
+		link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet"
+		link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous"
+		/[if lte IE 8]
+			link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css"
+		/[if gt IE 8]
+		link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css"
+		= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+		= javascript_include_tag 'application', 'data-turbolinks-track' => true, 'defer' => true
+
+	body
+		nav.nav-bar.pure-menu
+			div.page-width
+				div.nav-icons
+					a
+						= image_tag("logos/big-chill-logo.png", :class => 'nav-logo')
+					button.hamburger-menu
+						div.hamburger-menu-bar
+				ul.nav-list.pure-menu-list
+					li.nav-item.pure-menu-item
+						a.nav-link Home
+					li.nav-item.pure-menu-item
+						a.nav-link About
+					li.nav-item.pure-menu-item
+						a.nav-link Menu
+					li.nav-item.pure-menu-item
+						a.nav-link Services
+					li.nav-item.pure-menu-item
+						a.nav-link Contact
+		= yield

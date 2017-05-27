@@ -1,0 +1,452 @@
+h1, h2, h3, h4, h5, h6, p, em {
+  margin: 0; }
+
+em {
+  display: inline;
+  font-style: normal; }
+
+.pure-g [class*='pure-u'] {
+  font-family: 'Montserrat';
+  font-weight: 400; }
+
+.panel-heading {
+  margin-bottom: 1rem;
+  font: 700 1.33rem 'Montserrat';
+  text-align: center;
+  text-transform: uppercase; }
+  @media screen and (min-width: 48em) {
+    .panel-heading {
+      margin-bottom: 2rem;
+      font-size: 2rem; } }
+  @media screen and (min-width: 64em) {
+    .panel-heading {
+      font-size: 3rem; } }
+
+.body-copy {
+  margin-bottom: 1rem;
+  font: 400 1rem 'Montserrat';
+  line-height: 1.33; }
+
+html {
+  box-sizing: border-box;
+  font-size: 16px; }
+  @media screen and (min-width: 35.5em) {
+    html {
+      font-size: 21px; } }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+.page-width {
+  max-width: 1200px;
+  height: 100%;
+  padding: 0 1rem;
+  margin: 0 auto; }
+  @media screen and (min-width: 48em) {
+    .page-width {
+      padding: 0 3rem; } }
+  @media screen and (min-width: 64em) {
+    .page-width {
+      padding: 0 5rem; } }
+
+.section-panel {
+  margin-bottom: 1rem; }
+  @media screen and (min-width: 48em) {
+    .section-panel {
+      margin-bottom: 2rem; } }
+  @media screen and (min-width: 64em) {
+    .section-panel {
+      margin-bottom: 4rem; } }
+
+.nav-bar {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  min-width: 320px;
+  height: 65px;
+  background: #F27039;
+  transition: height .25s, background .25s; }
+  .nav-bar.opened-nav {
+    background: #F27039; }
+  .nav-bar .nav-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+    @media screen and (min-width: 48em) {
+      .nav-bar .nav-icons {
+        display: block;
+        width: auto;
+        height: auto; } }
+  .nav-bar .page-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+  .nav-bar .nav-logo {
+    height: 2rem;
+    min-height: 23.4px;
+    pointer-events: none; }
+  .nav-bar .hamburger-menu {
+    background: none;
+    outline: none;
+    cursor: pointer; }
+    @media screen and (min-width: 48em) {
+      .nav-bar .hamburger-menu {
+        display: none; } }
+  .nav-bar .hamburger-menu-bar, .nav-bar .hamburger-menu::before, .nav-bar .hamburger-menu::after {
+    width: 30px;
+    height: 2px;
+    margin: 7px 0;
+    background: #FFF;
+    transition: opacity .25s, transform .25s; }
+  .nav-bar .hamburger-menu::before,
+  .nav-bar .hamburger-menu::after {
+    display: block;
+    margin: 0;
+    content: ''; }
+  .nav-bar .hamburger-menu.cross-icon::before {
+    transform: translateY(9px) rotate(45deg); }
+  .nav-bar .hamburger-menu.cross-icon div {
+    opacity: 0; }
+  .nav-bar .hamburger-menu.cross-icon::after {
+    transform: translateY(-9px) rotate(-45deg); }
+  .nav-bar .nav-list {
+    display: block;
+    visibility: hidden;
+    width: 100%;
+    background: #F27039;
+    box-shadow: -3rem 0 #F27039, 3rem 0 #F27039;
+    opacity: 0;
+    transition: visibility .25s, opacity .25s; }
+    .nav-bar .nav-list.show-stacked-menu {
+      visibility: visible;
+      opacity: 1; }
+    @media screen and (min-width: 48em) {
+      .nav-bar .nav-list {
+        visibility: visible;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        opacity: 1; } }
+  .nav-bar .nav-item {
+    padding: 0;
+    border: none; }
+    .nav-bar .nav-item:last-child {
+      padding-right: 0;
+      border-right: none; }
+    @media screen and (min-width: 48em) {
+      .nav-bar .nav-item {
+        display: inline-block;
+        padding-right: .75rem;
+        padding-left: .75rem; } }
+  .nav-bar .nav-link {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid #FFF;
+    color: #FFF;
+    font: 400 1rem 'Montserrat';
+    cursor: pointer;
+    text-decoration: none; }
+    .nav-bar .nav-link:hover {
+      color: #000;
+      background: #FFF;
+      box-shadow: -3rem 0 #FFF, 3rem 0 #FFF; }
+    @media screen and (min-width: 35.5em) {
+      .nav-bar .nav-link {
+        font-size: 1rem; } }
+    @media screen and (min-width: 48em) {
+      .nav-bar .nav-link {
+        padding: 0;
+        border-bottom: none; }
+        .nav-bar .nav-link:hover {
+          color: #FFF;
+          background: none;
+          box-shadow: none; } }
+  .nav-bar .nav-item:last-child .nav-link {
+    border-bottom: none; }
+  .nav-bar:before {
+    display: none;
+    content: 'hamburger-menu'; }
+    @media screen and (min-width: 48em) {
+      .nav-bar:before {
+        content: none; } }
+
+.nav-bar.free-nav {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+
+button {
+  border: none; }
+
+/**
+ * Carousel.sass
+ * @author: Dang Van Thanh
+ * @email: dangvanthanh@dangthanh.org
+ * @description: A Simple Carousel Pure CSS Using Sass
+ * @version: 0.1.0
+ */
+.events-panel .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__prev > label:nth-child(3), .events-panel .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .events-panel .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .events-panel .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .events-panel .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .events-panel .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__next > label:nth-child(1) {
+  opacity: 1 !important;
+  z-index: 3; }
+
+.home-panel {
+  position: relative;
+  height: 10rem;
+  background: -webkit-linear-gradient(top, #F27039 0%, #F27039 85%, #FFF 85%, #FFF 100%, #FFF 100%); }
+  @media screen and (min-width: 48em) {
+    .home-panel {
+      height: 15rem; } }
+  @media screen and (min-width: 64em) {
+    .home-panel {
+      background: -webkit-linear-gradient(top, #F27039 0%, #F27039 80%, #FFF 80%, #FFF 100%, #FFF 100%); } }
+  @media screen and (min-width: 80em) {
+    .home-panel {
+      height: 18rem; } }
+  .home-panel .header-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 5rem;
+    margin: auto; }
+    @media screen and (min-width: 48em) {
+      .home-panel .header-image {
+        height: 7.5rem; } }
+    @media screen and (min-width: 64em) {
+      .home-panel .header-image {
+        height: 10rem; } }
+    @media screen and (min-width: 64em) {
+      .home-panel .header-image {
+        height: 12rem; } }
+
+@media screen and (min-width: 64em) {
+  .about-panel .about-panel-grid div:first-child {
+    padding-right: 1rem;
+    text-align: right; } }
+
+@media screen and (min-width: 64em) {
+  .about-panel .about-panel-grid div:last-child {
+    padding-left: 1rem; } }
+
+.about-panel .freshbar-logo {
+  height: 3rem; }
+
+.menu-panel .menu-list {
+  justify-content: space-between;
+  padding: 0; }
+
+.menu-panel .menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform .25s; }
+  @media screen and (min-width: 80em) {
+    .menu-panel .menu-item {
+      max-width: calc(100%/3 - 1rem);
+      padding: 1.5rem;
+      margin-bottom: 1rem; } }
+  .menu-panel .menu-item:hover {
+    z-index: 1;
+    transform: scale(1.05); }
+  .menu-panel .menu-item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    content: '';
+    transition: opacity .25s; }
+  .menu-panel .menu-item:hover::after {
+    opacity: 1; }
+
+.menu-panel .menu-item-pic {
+  height: 3rem;
+  margin-right: 1rem; }
+
+.menu-panel .menu-item-name {
+  font: 400 1rem 'Montserrat'; }
+
+.promo-panel .promo-box {
+  display: flex;
+  align-items: flex-end;
+  height: 12rem;
+  padding: 1rem;
+  margin-bottom: .5rem;
+  color: #FFF;
+  font: 700 2rem 'Montserrat';
+  cursor: pointer; }
+  @media screen and (min-width: 64em) {
+    .promo-panel .promo-box {
+      font-size: 3rem; } }
+
+.promo-panel .promo-one {
+  background: url("/assets/style/promo-one-bg.png") center center/cover; }
+  @media screen and (min-width: 64em) {
+    .promo-panel .promo-one {
+      max-width: calc(50% - 1rem); } }
+
+.promo-panel .promo-two {
+  background: url("/assets/style/promo-two-bg.png") center center/cover; }
+  @media screen and (min-width: 64em) {
+    .promo-panel .promo-two {
+      max-width: calc(50% - 1rem);
+      margin-left: 1rem; } }
+
+.promo-panel .promo-description em {
+  text-transform: uppercase; }
+
+.services-panel .panel-subheading {
+  margin-bottom: .5rem;
+  font: 500 1rem 'Montserrat';
+  text-transform: uppercase; }
+  @media screen and (min-width: 48em) {
+    .services-panel .panel-subheading {
+      font-size: 1.5rem; } }
+  @media screen and (min-width: 64em) {
+    .services-panel .panel-subheading {
+      padding-right: 1rem;
+      font-size: 2rem;
+      text-align: right; } }
+  @media screen and (min-width: 80em) {
+    .services-panel .panel-subheading {
+      font-size: 3rem; } }
+
+.services-panel .body-copy {
+  margin-bottom: 0; }
+  @media screen and (min-width: 64em) {
+    .services-panel .body-copy {
+      padding-left: 1rem; } }
+
+.services-panel .services-number {
+  display: block; }
+
+.events-panel .carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .events-panel .carousel > input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; }
+    .events-panel .carousel > input[type="radio"]:checked ~ .carousel__items .carousel__item,
+    .events-panel .carousel > input[type="radio"]:checked ~ .carousel__prev > label,
+    .events-panel .carousel > input[type="radio"]:checked ~ .carousel__next > label {
+      opacity: 0; }
+    .events-panel .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
+      opacity: 1; }
+    .events-panel .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__nav > label:nth-child(1) {
+      background: #ccc;
+      cursor: default;
+      pointer-events: none; }
+    .events-panel .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
+      opacity: 1; }
+    .events-panel .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__nav > label:nth-child(2) {
+      background: #ccc;
+      cursor: default;
+      pointer-events: none; }
+    .events-panel .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
+      opacity: 1; }
+    .events-panel .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__nav > label:nth-child(3) {
+      background: #ccc;
+      cursor: default;
+      pointer-events: none; }
+  .events-panel .carousel__items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    height: 600px;
+    position: relative; }
+  .events-panel .carousel__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; }
+    .events-panel .carousel__item img {
+      width: 100%;
+      vertical-align: middle; }
+  .events-panel .carousel__prev > label, .events-panel .carousel__next > label {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    opacity: 0;
+    z-index: 2; }
+    .events-panel .carousel__prev > label:hover, .events-panel .carousel__prev > label:focus, .events-panel .carousel__next > label:hover, .events-panel .carousel__next > label:focus {
+      opacity: .5 !important; }
+    .events-panel .carousel__prev > label:before, .events-panel .carousel__prev > label:after, .events-panel .carousel__next > label:before, .events-panel .carousel__next > label:after {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit; }
+    .events-panel .carousel__prev > label:before, .events-panel .carousel__next > label:before {
+      background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%), linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
+      width: 60%;
+      height: 60%;
+      top: 20%; }
+  .events-panel .carousel__prev > label {
+    left: 2%; }
+    .events-panel .carousel__prev > label:before {
+      left: 35%;
+      top: 20%;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg); }
+  .events-panel .carousel__next > label {
+    right: 2%; }
+    .events-panel .carousel__next > label:before {
+      left: 10%;
+      transform: rotate(315deg);
+      -webkit-transform: rotate(315deg); }
+  .events-panel .carousel__nav {
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 3; }
+    .events-panel .carousel__nav > label {
+      border: 1px solid #fff;
+      display: inline-block;
+      border-radius: 50%;
+      cursor: pointer;
+      margin: 0 .125%;
+      width: 20px;
+      height: 20px; }
+
+.events-panel .carousel {
+  overflow: hidden;
+  height: 20rem;
+  background: red; }
+  @media screen and (min-width: 64em) {
+    .events-panel .carousel {
+      height: 25rem; } }
+  @media screen and (min-width: 80em) {
+    .events-panel .carousel {
+      height: 30rem; } }
+
+.events-panel .carousel-item-container {
+  position: relative; }
+  .events-panel .carousel-item-container img {
+    position: absolute;
+    top: -5rem; }

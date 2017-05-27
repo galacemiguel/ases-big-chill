@@ -1,0 +1,34 @@
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	@media #{$sm-screen} {
+		font-size: 21px;
+	}
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+.page-width {
+	max-width: 1200px;
+	height: 100%;
+	padding: 0 1rem;
+	margin: 0 auto;
+	@media #{$md-screen} {
+		padding: 0 3rem;
+	}
+	@media #{$lg-screen} {
+		padding: 0 5rem;
+	}
+}
+
+.section-panel {
+	margin-bottom: 1rem;
+	@media #{$md-screen} {
+		margin-bottom: 2rem;
+	}
+	@media #{$lg-screen} {
+		margin-bottom: 4rem;
+	}
+}

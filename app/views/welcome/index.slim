@@ -1,0 +1,108 @@
+header.home-panel.section-panel
+	div.page-width
+		= image_tag("style/header-image.png", :class => 'header-image')
+
+section.about-panel.section-panel
+	div.page-width
+		h1.panel-heading How It All Started
+		div.about-panel-grid.pure-g
+			div.pure-u-1.pure-u-lg-3-5
+				p.body-copy In December 1994, Big Chill was established as a new concept serving premium quality blended shakes made with 100% fresh-cut fruit. It caters to a diverse age group within the AB & upper C segments of the market with branches conviently located in shopping malls, universities & office buildings within Greater Manila. Its extensive network of hops & kiosks provide convenient access to fresh fruit shakes anytime, anywhere.
+				p.body-copy Big Chill is known for its award-winning beverages, having been recognized as the "Best Fruit Shake Drink" by the Product Quality Excellence Awards for both the regional and national categories.
+			div.pure-u-1.pure-u-lg-2-5
+				= image_tag("logos/freshbar-logo.jpg", :class => 'freshbar-logo')
+				p.body-copy Fresh Bar is an expanded concept of Big Chill which offers the same fresh fruit shakes along with a line of hearty gourmet soups, healthy pasta offerings, fresh salads and sandwiches. It aims to make healthy meal options readily available to the same market that appreciates Big Chill's selection of fresh fruit shakes.
+				p.body-copy Big Chill and Fresh Bar is an exciting food service beverage concept ideally suited to today's healthy and fast-paced lifestyle.
+
+section.menu-panel.section-panel
+	div.page-width
+		h1.panel-heading Our Menu
+		ul.menu-list.pure-g
+			li.menu-item.pure-u-1.pure-u-md-1-2.pure-u-xl-1-3
+				= image_tag("content/dalanghita-dazzler.png", :class => 'menu-item-pic')
+				span.menu-item-name Dalanghita Dazzler
+			li.menu-item.pure-u-1.pure-u-md-1-2.pure-u-xl-1-3
+				= image_tag("content/strawberry-daiquire.png", :class => 'menu-item-pic')
+				span.menu-item-name Strawberry Daiquire
+			li.menu-item.pure-u-1.pure-u-md-1-2.pure-u-xl-1-3
+				= image_tag("content/banana-smoothie.png", :class => 'menu-item-pic')
+				span.menu-item-name Banana Smoothie
+			li.menu-item.pure-u-1.pure-u-md-1-2.pure-u-xl-1-3
+				= image_tag("content/gorgeous-grape.png", :class => 'menu-item-pic')
+				span.menu-item-name Gorgeous Grape
+			li.menu-item.pure-u-1.pure-u-md-1-2.pure-u-xl-1-3
+				= image_tag("content/kiwi-kraze.png", :class => 'menu-item-pic')
+				span.menu-item-name Kiwi Kraze
+			li.menu-item.pure-u-1.pure-u-md-1-2.pure-u-xl-1-3
+				= image_tag("content/mango-meditation.png", :class => 'menu-item-pic')
+				span.menu-item-name Mango Meditation
+			li.menu-item.pure-u-1.pure-u-md-1-2.pure-u-xl-1-3
+				= image_tag("content/melon-melba.png", :class => 'menu-item-pic')
+				span.menu-item-name Melon Melba
+			li.menu-item.pure-u-1.pure-u-md-1-2.pure-u-xl-1-3
+				= image_tag("content/banana-peanut.png", :class => 'menu-item-pic')
+				span.menu-item-name Banana Peanut
+			li.menu-item.pure-u-1.pure-u-md-1-2.pure-u-xl-1-3
+				= image_tag("content/strawberry-mango.png", :class => 'menu-item-pic')
+				span.menu-item-name Strawberry Mango
+
+section.promo-panel.section-panel
+	div.page-width
+		div.promo-panel-grid.pure-g
+			div.promo-one.promo-box.pure-u-1.pure-u-lg-1-2
+				span.promo-description
+					em 15% off 
+					| on Mondays
+			div.promo-two.promo-box.pure-u-1.pure-u-lg-1-2
+				span.promo-description
+					em Buy 1 <html><br /></html> Get 1
+
+section.services-panel.section-panel
+	div.page-width
+		h1.panel-heading Our Services
+		div.services-panel-grid.pure-g
+			h2.panel-subheading.pure-u-1.pure-u-lg-2-5 How to Franchise with Us
+			div.pure-u-1.pure-u-lg-3-5
+				p.body-copy Prospective franchises to be evaluated based on business experience, financial capability and proposed sites.
+				p.body-copy Investment requirement varies depending on store size and locationi, but multi-unit commitments are preferred for area development programs.
+				p.body-copy Franchise fee is already included in the package cost.
+				p.body-copy Royalty fee is at 5% of gross sales, advertising fee at 1%
+				p.body-copy
+					| For more information on The Big Chill's area development or franchise program, you may call 
+					span.services-number +632-661-7723
+
+section.events-panel.section-panel
+	div.page-width
+		h1.panel-heading Our Events
+		div.carousel
+			input#carousel-1 type="radio" name="carousel[]" checked="true"
+			input#carousel-2 type="radio" name="carousel[]"
+			input#carousel-3 type="radio" name="carousel[]"
+			ul.carousel__items
+				li.carousel__item
+					div.carousel-item-container
+						img
+				li.carousel__item
+					div.carousel-item-container
+						= image_tag("content/event-banner.jpg")
+				li.carousel__item
+					div.carousel-item-container
+						img
+			div.carousel__prev
+				label for="carousel-1"
+				label for="carousel-2"
+				label for="carousel-3"
+			div.carousel__next
+				label for="carousel-1"
+				label for="carousel-2"
+				label for="carousel-3"
+			div.carousel__nav
+				label for="carousel-1"
+				label for="carousel-2"
+				label for="carousel-3"
+
+section.contact-panel.section-panel
+	div.page-width
+		h1.panel-heading Contact Us
+
+footer.main-footer

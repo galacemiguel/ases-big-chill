@@ -1,0 +1,142 @@
+.nav-bar {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	width: 100%;
+	min-width: 320px;
+	height: 65px;
+	background: $big-chill-orange;
+	transition: height .25s, background .25s;
+	&.opened-nav {
+		background: $big-chill-orange;
+	}
+	.nav-icons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		@media #{$md-screen} {
+			display: block;
+			width: auto;
+			height: auto;
+		}
+	}
+	.page-width {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav-logo {
+		height: 2rem;
+		min-height: 1.3 * 18px;
+		pointer-events: none;
+	}
+	.hamburger-menu {
+		background: none;
+		outline: none;
+		cursor: pointer;
+		@media #{$md-screen} {
+			display: none;
+		}
+	}
+	.hamburger-menu-bar {
+		width: 30px;
+		height: 2px;
+		margin: 7px 0;
+		background: #FFF;
+		transition: opacity .25s, transform .25s;
+	}
+	.hamburger-menu::before,
+	.hamburger-menu::after {
+		@extend .hamburger-menu-bar;
+		display: block;
+		margin: 0;
+		content: '';
+	}
+	.hamburger-menu.cross-icon {
+		&::before {
+			transform: translateY(9px) rotate(45deg);
+		}
+		div {
+			opacity: 0;
+		}
+		&::after {
+			transform: translateY(-9px) rotate(-45deg);
+		}
+	}
+	.nav-list {
+		display: block;
+		visibility: hidden;
+		width: 100%;
+		background: $big-chill-orange;
+		box-shadow: -3rem 0 $big-chill-orange, 3rem 0 $big-chill-orange;
+		opacity: 0;
+		transition: visibility .25s, opacity .25s;
+		&.show-stacked-menu {
+			visibility: visible;
+			opacity: 1;
+		}
+		@media #{$md-screen} {
+			visibility: visible;
+			width: auto;	
+			background: none;
+			box-shadow: none;
+			opacity: 1;
+		}
+	}
+	.nav-item {
+		padding: 0;
+		border: none;
+		&:last-child {
+			padding-right: 0;
+			border-right: none;
+		}
+		@media #{$md-screen} {
+			display: inline-block;
+			padding-right: .75rem;
+			padding-left: .75rem;
+		}
+	}
+	.nav-link {
+		display: block;
+		padding: 1rem 0;
+		border-bottom: 1px solid #FFF;
+		color: #FFF;
+		font: 400 1rem 'Montserrat';
+		cursor: pointer;
+		text-decoration: none;
+		&:hover {
+			color: #000;
+			background: #FFF;
+			box-shadow: -3rem 0 #FFF, 3rem 0 #FFF;
+		}
+		@media #{$sm-screen} {
+			font-size: 1rem;
+		}
+		@media #{$md-screen} {
+			padding: 0;
+			border-bottom: none;
+			&:hover {
+				color: #FFF;
+				background: none;
+				box-shadow: none;
+			}
+		}
+	}
+	.nav-item:last-child .nav-link {
+		border-bottom: none;
+	}
+	&:before {
+		display: none;
+		content: 'hamburger-menu';
+		@media #{$md-screen} {
+			content: none;
+		}
+	}
+}
+
+.nav-bar.free-nav {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}

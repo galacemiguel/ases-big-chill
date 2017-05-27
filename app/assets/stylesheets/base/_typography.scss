@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5, h6, p, em {
+	margin: 0;
+}
+
+em {
+	display: inline;
+	font-style: normal;
+}
+
+.pure-g [class *= 'pure-u'] {
+	font-family: 'Montserrat';
+	font-weight: 400;
+}
+
+.panel-heading {
+	margin-bottom: 1rem;
+	font: 700 1.33rem 'Montserrat';
+	text-align: center;
+	text-transform: uppercase;
+	@media #{$md-screen} {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+	}
+	@media #{$lg-screen} {
+		font-size: 3rem;
+	}
+}
+
+.body-copy {
+	margin-bottom: 1rem;
+	font: 400 1rem 'Montserrat';
+	line-height: 1.33;
+}
